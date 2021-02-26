@@ -1,0 +1,40 @@
+.pic{
+    display: none;
+    position: absolute;
+    margin: -10px 100px;
+}
+.small:hover + img.pic{
+    display:block;
+    border: 1px solid black;
+    width: 240px;
+    height: 180px;
+}
+ul{
+    list-style-type: none;
+    padding-left:0px;
+    text-align: center;
+    width: 400px;
+    background-color: black;
+    padding: 30px 30px;
+    margin: 0 auto;
+
+}
+/* div{
+    background-color: #000;
+    width: 400px;
+    height: 300px;
+    padding: 10px 50px 10px 50px;
+    margin: 0 auto;
+    text-align:center;
+} */
+li{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+ul{
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 30px;
+    width: 400px;
+}
