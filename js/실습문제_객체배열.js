@@ -38,8 +38,8 @@ function Student(name, java, oracle, html5, css3, javascript){
 }
 function test1(){
     var students = [
-        new Student('김동현', 90, 56, 56, 44, 34),
-        new Student('홍길동', 45, 76, 34, 22, 56),
+        new Student('김동현', 90, 56, 56, 45, 34),
+        new Student('홍길동', 45, 76, 34, 33, 56),
         new Student('유관순', 76, 34, 54, 56, 22)
     ];
     for(var i = 0; i < students.length; i++){
