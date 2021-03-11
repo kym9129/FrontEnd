@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - 실습문제_유효성검사</title>
+</head>
+<body>
+    <h1>실습문제 - 유효성검사</h1>
+    <p>1. 다음과 같은 input태그에서 주민번호의 자릿수를 체크하는 정규표현식을 작성하라.</p>
+    <label>주민번호 입력 : </label>
+    <input type="text" id="ssn">
+    <button type='button' onclick="testSSN();">실행확인</button>
+    <script>
+        function testSSN(){
+            var ssn = document.querySelector("#ssn").value;
+            var reg = /^[0-9]{6}-[(1|2|3|4)][0-9]{6}$/;
+            if(!reg.test(ssn)){
+                alert("올바른 주민등록번호를 입력해주십시오.");
+            }
+            else{
+                alert("주민등록번호 입력 완료!");
+            }
+        }
+    </script>
+</body>
+</html>
