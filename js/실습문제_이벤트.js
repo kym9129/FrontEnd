@@ -33,6 +33,8 @@ window.onload = function(){
             //div태그 자식으로 버튼태그 생성
             wrapper.appendChild(btn);
         }
+        //1회만 실행되도록 핸들러 삭제
+        this.onclick=null;
 
     };
 
