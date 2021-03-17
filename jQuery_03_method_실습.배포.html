@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery_03_method_실습</title>
+	<!--최신 jquery cdn 사용하기-->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>    
+</head>
+<body>
+    <h2>Method1</h2>
+    <script>
+        function add(){
+            //입력값 가져오기
+           var $title = $("[name=title]").val();
+           var $content = $("[name=content]").val();
+           var $owner = $("[name=owner]").val();
+
+           //테이블 만들 요소 변수로 담아두기
+            var $table = $("table");
+            var $tr = $("<tr></tr>");
+
+            //태그+입력값
+            var $tdTitle = $("<td>" + $title + "</td>");
+            var $tdContent = $("<td>" + $content + "</td>");
+            var $tdOwner = $("<td>" + $owner + "</td>");
+
+            //table의 자식으로 tr생성
+            //tr의 자식으로 td3개 생성
+            $tr.appendTo($table)
+                .append($tdTitle)
+                .append($tdContent)
+                .append($tdOwner);            
+        }
+        </script>
+    
+    제목 : <input type="text" name="title" /> <br />
+    내용 : <input type="text" name="content" /><br />
+    작성자 : <input type="text" name="owner" /><br /> <br>
+    <input type="button" value="테이블에 추가" onclick="add()" /> <br><br>
+    <table border="1">
+        <tr>
+            <td> 제목 </td>
+            <td> 내용 </td>
+            <td> 작성자 </td>
+        </tr>
+    </table>
+
+    <h2>Method2</h2>
+    <script>
+        function addFile(){
+            var $file = $("[name=f0]");
+            var $fileCopy = $file.clone(); //input file 복제
+            var $div = $("div");
+            
+            //div 다음에 div의 형제요소로 $fileCopy를 삽입
+            $div.after($fileCopy);
+        }
+
+        function delFile(){
+            $("div ~ *").remove();
+        }
+        </script>
+    
+    <div>
+        <input type="file" name="f0"/>  &nbsp;&nbsp;
+        <input type="button" value="추가" onclick="addFile()" />&nbsp;
+        <input type="button" value="삭제" onclick="delFile()" />
+    </div>
+
+</body>
+</html>
